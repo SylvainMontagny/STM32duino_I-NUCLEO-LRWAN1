@@ -1,0 +1,1 @@
+STM32duino_I-NUCLEO-LRWAN1
