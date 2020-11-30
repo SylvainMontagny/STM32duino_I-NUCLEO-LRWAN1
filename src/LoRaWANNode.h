@@ -62,6 +62,10 @@
 #define LORA_SEND_DELAYED   0     // Busy or duty cycle
 #define LORA_SEND_ERROR     (-1)  // Send failed
 
+#define PUSHBUTTON          PC13
+#define ENABLE              1
+#define DISABLE             0
+
 class LoRaWANNodeClass {
 public:
 
