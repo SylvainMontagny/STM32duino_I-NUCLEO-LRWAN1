@@ -63,7 +63,7 @@
  * Delay before reception:
  * rx1 delay + rx2 delay + SF12 transmision time = 1s + 2s + 1.5s = 4.5s
  */
-#define ASYNC_EVENT_TIMEOUT   5000
+#define ASYNC_EVENT_TIMEOUT   7000 // Change !!!! Initialement 5000
 
 /* Exported types ------------------------------------------------------------*/
 
