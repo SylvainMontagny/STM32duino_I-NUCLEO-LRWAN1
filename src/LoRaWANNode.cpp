@@ -55,6 +55,7 @@ bool LoRaWANNodeClass::begin(HardwareSerial *serialx, uint8_t band, uint8_t lora
 {
   uint8_t nbTry = 0;
   uint8_t enable = 0;
+  sPowerCtrlSet_t structPowerControl = {0,1,0};
 
   if(!IS_BAND(band) || !IS_CLASS(loraClass) || (serialx == NULL)) {
     return 0;
@@ -124,7 +125,8 @@ bool LoRaWANNodeClass::begin(HardwareSerial *serialx, uint8_t band, uint8_t lora
   
   
   Lora_SetDataRateRxWind2(0);       // Ajouté pour mettre le SF RX2 à 12 au lieu de 9 pour le JOIN ACCEPT.
-
+  Lora_SetMCUPowerCtrl(&structPowerControl); //Ajouté pour activer le STOP Sleep Mode au lieu du STANDBY Sleep Mode (par défaut).
+    
   return 1;
 }
 
