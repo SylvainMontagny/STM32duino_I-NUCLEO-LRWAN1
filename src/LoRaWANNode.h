@@ -52,6 +52,9 @@
 #define  LORA_CLASS_B                                1U
 #define  LORA_CLASS_C                                2U
 
+#define OTAA                                          1
+#define ABP                                           0
+
 #define IS_CLASS(loraClass) ( (loraClass == LORA_CLASS_A)  ||\
                               (loraClass == LORA_CLASS_B)  ||\
                               (loraClass == LORA_CLASS_C) )
